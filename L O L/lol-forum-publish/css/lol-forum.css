@@ -1,0 +1,58 @@
+/*通用类*/
+.i-hide,.i-nosee{
+  display: none;
+}
+.i-show,.i-cansee{
+  display: block;
+}
+.i-container-distance{
+  margin-top: 10px;
+}
+/*重定义表格样式*/
+tbody>tr>td.i-txt-middle{
+  vertical-align: middle;
+}
+tr>th,tr>td{
+  text-align: center;
+}
+tr>td>a{
+  line-height: 100%;
+}
+.i-table-cell{
+  display: table-cell;
+  vertical-align: middle;
+}
+/*页面下标组*/
+#pager-collapse-index{
+margin: 14px 0;
+}
+#pager-collapse-index>li{
+  float: left;
+  margin: 0 2px;
+  padding: 0 4px;
+  border-radius: 2px;
+}
+.i-index-active{
+  background: #e7e7e7;
+}
+/*自定义向下箭头*/
+.i-caret{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 7px dashed;
+  border-top: 7px solid \9;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+}
+/*返回键*/
+#return{
+  margin-right: 5px;
+}
+/*富文本编辑器高度*/
+.i-editor-height{
+  min-height: 400px;
+  max-height: 500px;
+}

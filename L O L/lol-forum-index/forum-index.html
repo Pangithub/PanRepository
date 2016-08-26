@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap 101 Template</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/lol-forum.css">
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<style>
+  body {
+    /*background: url("img/index_bg_floor.jpg") no-repeat;*/
+    /*background-size: cover;*/
+  }
+
+  .iall {
+    width: 49%;
+    margin-left: 25.5%;
+    overflow: hidden;
+    /*border: 1px solid #000;*/
+  }
+
+  #i-pager div {
+    border: 1px solid #000;
+  }
+</style>
+<body>
+<div class=""></div>
+<!--导航条-->
+<div id="nav" class="navbar navbar-default">
+  <div class="container">
+    <!--头部-->
+    <div class="navbar-header">
+      <!--LOGO-->
+      <a href="#" class="navbar-brand">LOL</a>
+      <!--折叠菜单触发按钮-->
+      <a href="#navbar-collapse" class="navbar-toggle" data-toggle="collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    </div>
+    <!--折叠菜单-->
+    <div class="navbar-collapse collapse" id="navbar-collapse">
+      <!--导航-->
+      <ul class="nav navbar-nav">
+        <li><a href="#">论坛首页</a></li>
+        <li><a href="#">官网首页</a></li>
+        <li><a href="#">道具城</a></li>
+        <li><a href="#">QQ</a></li>
+      </ul>
+      <!--登录注册-->
+      <div class="btn-group btn-group-sm navbar-form navbar-right" role="group" aria-label="...">
+        <button type="button" class="btn btn-primary">登录</button>
+        <button type="button" class="btn btn-primary">注册</button>
+      </div>
+      <!--搜索框-->
+      <form action="" class="navbar-form navbar-right hidden-sm hidden-xs">
+        <div class="form-group has-feedback">
+          <label for="search" class="sr-only">搜索</label>
+          <input type="text" id="search" class="form-control" placeholder="帖子搜索">
+          <span class="glyphicon glyphicon-search form-control-feedback"></span>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!--网页路径-->
+<div id="pageUrl" class="container">
+  <ol class="breadcrumb">
+    <li><img src="img/home_xiao.png" alt=""></li>
+    <li class="active">论坛首页</li>
+  </ol>
+</div>
+<!--主题筛选-->
+<div id="theme-choose" class="container">
+  <a class="label label-default">全部</a>
+  <a class="label label-primary">讨论</a>
+  <a class="label label-success">分享</a>
+  <a class="label label-info">活动</a>
+  <a class="label label-warning">互动</a>
+  <a class="label label-danger">公告</a>
+</div>
+<!--帖子部分-->
+<div class="imain">
+  <div class="container">
+    <div class="row">
+      <!--帖子部分-->
+      <div class="col-xs-10">
+        <div class="table-responsive">
+          <table id="posts" class="table table-hover">
+            <thead>
+            <tr class="">
+              <th><a href="#">顶</a></th>
+              <th><a href="#">主题</a></th>
+              <th><a href="#">标题</a></th>
+              <th><a href="#">作者</a></th>
+              <th><a href="#">回复</a></th>
+              <th><a href="#">最后发表</a></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="">
+                <img src="img/praise_01.png" alt="">
+                <p class="text-muted">283</p>
+              </td>
+              <td class="i-txt-middle"><a href="#" class="text-warning">[活动]</a></td>
+              <td class="i-txt-middle"><a href="#" class="text-danger">夏日源计划能量席卷，超值周边你值得拥有</a></td>
+              <td>
+                <a href="#">MVP_子婴</a>
+                <p>2016-5-4 15:32</p>
+              </td>
+              <td class="i-txt-middle"><a href="#">11043</a></td>
+              <td>
+                <a href="#">沃大雕</a>
+                <p>2016-5-4 15:32</p>
+              </td>
+            </tr>
+            <tr></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!--个人信息部分-->
+      <div class="col-xs-2">
+        <img src="http://bbs.lol.qq.com/uc_server/avatar.php?uid=45390504&size=small" alt="..." class="img-responsive">
+        <p>沃大雕我自嚎</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--分页部分-->
+<div class="navbar" id="pager">
+  <div class="container">
+    <div class="navbar-header" id="pager-header">
+      <!--发帖按钮-->
+      <button type="button" class="btn btn-primary navbar-btn">发帖</button>
+      <!--折叠菜单触发按钮-->
+      <a href="#pager-collapse" class="navbar-toggle btn btn-lg" data-toggle="collapse">
+        <span class="glyphicon glyphicon-chevron-down"></span>
+      </a>
+    </div>
+    <div class="navbar-collapse collapse" id="pager-collapse">
+      <form id="pager-collapse-form" class="navbar-form navbar-right hidden-sm hidden-xs">
+        <div class="form-group">
+          <label for="page-jump" class="sr-only">跳转</label>
+          <input type="text" id="page-jump" class="form-control" style="max-width: 20%">
+          <span class="text-muted">/1000页</span>
+          <a type="button" class="btn btn-info btn-xs" id="page-jump-btn">跳转</a>
+          <a href="#" class="navbar-link" id="next">下一页</a>
+        </div>
+      </form>
+      <ul class="list-unstyled navbar-right" id="pager-collapse-index">
+        <li id="toIndex" class="i-hide"><a href="#">...1</a></li>
+        <li id="prevPage" class="i-hide">
+          <a href="#">上一页</a>
+        </li>
+        <li class="i-index-active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+        <li><a href="#">8</a></li>
+        <li><a href="#">9</a></li>
+        <li><a href="#">10</a></li>
+        <li id="toLast"><a href="#">尾页</a></li>
+      </ul>
+      <a href="#" id="return" class="btn btn-info btn-xs navbar-btn navbar-right hidden-xs">返回</a>
+    </div>
+  </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+  var s = document.createElement('script');
+  s.onload = function () {
+    bootlint.showLintReportForCurrentDocument([])
+  }
+  s.src = 'js/bootlint.js';
+  document.body.appendChild(s);
+</script>
+<script src="js/forum-index.js"></script>
+</body>
+</html>

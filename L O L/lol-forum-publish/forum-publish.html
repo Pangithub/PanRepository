@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap 101 Template</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/lol-forum.css">
+  <link rel="stylesheet" type="text/css" href="wang/dist/css/wangEditor.min.css">
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<style>
+  body {
+    /*background: url("img/index_bg_floor.jpg") no-repeat;*/
+    /*background-size: cover;*/
+  }
+
+  .iall {
+    width: 49%;
+    margin-left: 25.5%;
+    overflow: hidden;
+    /*border: 1px solid #000;*/
+  }
+
+  #i-pager div {
+    border: 1px solid #000;
+  }
+</style>
+<body>
+
+<!--导航条-->
+<div id="nav" class="navbar navbar-default">
+  <div class="container">
+    <!--头部-->
+    <div class="navbar-header">
+      <!--LOGO-->
+      <a href="#" class="navbar-brand">LOL</a>
+      <!--折叠菜单触发按钮-->
+      <a href="#navbar-collapse" class="navbar-toggle" data-toggle="collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    </div>
+    <!--折叠菜单-->
+    <div class="navbar-collapse collapse" id="navbar-collapse">
+      <!--导航-->
+      <ul class="nav navbar-nav">
+        <li><a href="#">论坛首页</a></li>
+        <li><a href="#">官网首页</a></li>
+        <li><a href="#">道具城</a></li>
+        <li><a href="#">QQ</a></li>
+      </ul>
+
+      <!--搜索框-->
+      <form action="" class="navbar-form navbar-right hidden-sm hidden-xs">
+        <div class="form-group">
+          <span class="">沃大雕我自豪</span>
+          <img src="http://bbs.lol.qq.com/uc_server/avatar.php?uid=45390504&size=small" alt="">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!--网页路径-->
+<div id="pageUrl" class="container">
+  <ol class="breadcrumb">
+    <li><img src="img/home_xiao.png" alt=""></li>
+    <li class="active">论坛首页</li>
+    <li class="active">发表帖子</li>
+  </ol>
+</div>
+<!--编辑器部分-->
+<div id="write-post" class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="write-post-dropdownBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span>请选择主题分类</span>
+          <span class="caret"></span>
+        </button>
+        <ul id="write-post-dropdownMenu" class="dropdown-menu" aria-labelledby="write-post-dropdownBtn">
+          <li><a href="#">讨论</a></li>
+          <li><a href="#">分享</a></li>
+          <li><a href="#">互动</a></li>
+          <li><a href="#">活动</a></li>
+          <li><a href="#">公告</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="inputTitle" class="sr-only">请输入帖子标题</label>
+        <input type="text" id="inputTitle" placeholder="请输入帖子标题" class="form-control" maxlength="40">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <!--使用富文本编辑器插件-->
+      <div id="editor-trigger" class="i-editor-height"></div>
+    </div>
+  </div>
+</div>
+<!--发帖部分-->
+<div class="container i-container-distance">
+  <a id="publish-post" class="btn btn-primary">发表帖子</a>
+</div>
+<!--错误提示模态框-->
+<!-- 错误提示模态框触发按钮 -->
+<button type="button" id="errHintBtn" data-toggle="modal" data-target="#errHintModal" style="display: none">
+  点你妹
+</button>
+<!-- 模态框 -->
+<div class="modal fade" id="errHintModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">错误信息提示</h4>
+      </div>
+      <div class="modal-body">
+        <span class="text-danger"></span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="wang/dist/js/wangEditor.js"></script>
+<script src="js/lol-forum-publish.js"></script>
+
+<script>
+  var s = document.createElement('script');
+  s.onload = function () {
+    bootlint.showLintReportForCurrentDocument([])
+  }
+  s.src = 'js/bootlint.js';
+  document.body.appendChild(s);
+</script>
+</body>
+</html>
